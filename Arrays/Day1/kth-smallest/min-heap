@@ -1,0 +1,19 @@
+//expected approach it is better than naive approach beacuse if n is larger than naive approach will give a worst case and also if we have the k smallest than we can get a better output using min-heap
+//min heap is basically a proirityQueue where the smallest element placed at top we have various methods such as peek(), poll(),add().
+
+class Solution{
+public int kthsmallest(int[] arr, int k){
+  PriorityQueue<Integer> pq=new PriorityQueue<>(Collections.reverseOrder());
+        for(int val:arr){
+            pq.add(val);
+            if(pq.size()>k){
+                pq.poll();
+            }
+        }
+        return pq.peek();
+        
+    }
+    }
+
+    ## TC-O(nlogk) for a min heap it takes O(logk) for add operation
+    ## SC- O(n)  heap size
