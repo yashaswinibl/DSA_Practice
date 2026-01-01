@@ -1,0 +1,19 @@
+// two pass approach its a basic approach not recommended for optimized code
+class Solution {
+    static int inversionCount(int arr[]) {
+        // Code Here
+        int n=arr.length;
+        int count=0;
+        for(int i=0;i<n;i++){
+            for(int j=i;j<n;j++){
+                if(i<j && arr[i]>arr[j]){
+                    count++;
+                }
+            }
+        }
+        return count;
+    }
+}
+
+#Tc-O(n2)
+#SC-O(1)
