@@ -4,3 +4,6 @@ class Solution {
         return arr[k-1];
 }
 }
+
+#TC-O(nlogn) for sorting 
+#SC-O(1)
