@@ -1,0 +1,22 @@
+Approach 1: brute force using 2 for loop and then chech and return
+Approach 2: Use HashSet and make a prfix sum and check if its already present if present or its 0 return treu or else add and finall return false 
+class Solution {
+    // Function to check whether there is a subarray present with 0-sum or not.
+    static boolean findsum(int arr[]) {
+        // Your code here
+        int n=arr.length;
+        Set<Integer> SumMap=new HashSet<>();
+       int sum=0;
+       for(int i=0;i<n;i++){
+           sum+=arr[i];
+           if(sum==0 || SumMap.contains(sum) ){
+               return true;
+           }
+           SumMap.add(sum);
+       }
+       return false;
+    }
+}
+
+TC-O(n)
+Sc-O(n)  storing prefix sum
