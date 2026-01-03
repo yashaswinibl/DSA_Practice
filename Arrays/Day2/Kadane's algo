@@ -1,0 +1,15 @@
+class Solution {
+    int maxSubarraySum(int[] arr) {
+        // Code here
+        int maxsum=Integer.MIN_VAlUE;
+        int cursum=0;
+        for(int num:arr){
+            cursum+=0;
+            maxsum=Math.max(maxsum,cursum);
+            if(cursum<0) cursum=0;  //reset to 0 if its negative
+        }
+    }
+    return maxsum;
+}
+//TC-O(n)
+//SC-O(1)
